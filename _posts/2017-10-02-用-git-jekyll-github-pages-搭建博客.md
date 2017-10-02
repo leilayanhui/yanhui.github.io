@@ -1,17 +1,27 @@
-# 用 Git, Jekyll, Github Pages 搭建博客
+---
+title: 用 Git Jekyll Github Pages 搭建博客
+excerpt_separator: <!--more-->
+categories: 
+ - programming
+tags:
+---
+
+# 三大工具 Git, Jekyll, Github Pages
 使用这三个工具搭建博客，既能专心写博客，又能达到高度自己定义，无广告，若你还会 css，JavaScript，还能自己设计博客式样。
 
 **Git**：用于管理版本，即使你不断修改、更新自己的博客，也能用 git 找回原来的内容。
 
-**Jekyll**：你可以把它理解成一个文本转换器，你使用自己最习惯的标记语言写作，然后 jekyll 就会帮你转换成静态的网页，即在浏览器中看到的博客网页。
+**Jekyll**：你可以把它理解成一个文本转换器，使用 markdown 转型写作，然后交由 jekyll 帮你转换成静态的网页，即在浏览器中看到的博客网页。
 
 **Github Pages**：想要世界各地的人们看到你的博客，你需要将其发布到公共网络平台上，类似新浪博客、简书。Github Pages 就是这样的平台，除了博客，还能发布各种开发项目。
+
+<!--more-->
 
 首先，你需要注册 GitHub Pages，注册登陆 [Github](https://github.com/)，点击右上角的加号 New repository. 在 Repository name 填入 username.github.io，勾选 Initialize this repository with a README。进入该仓库，点击 Settings，拉到 GitHub Pages，在 Source 中选择 master branch。
 
 我的系统环境：windows 10 64bit, windows subsystem linux, ubuntu 16.04
 
-## 安装 Ruby
+# 安装 Ruby
 Jekyll 是基于 Ruby 开发的，所以要先安装 Ruby。Ruby 和 Python 一样有很多版本，所以最好先安装 Ruby 的版本管理软件，如 rvm，再通过 rvm 安装 ruby。
 ```
 # 先安装 GPG keys
@@ -69,7 +79,7 @@ $ git merge origin/master
 ```
 打开编辑器，根据模板文档修改 `_config.yml`。查看自己的 Gemfile 文件，内容是否如下
 ```
-source 'https://rubygems.org
+source 'https://rubygems.org'
 gem 'github-pages', group: :jekyll_plugins
 ```
 发布的博文都放在 `_post` 文件夹，主题模板会自带一些测试页面，把它们删除，添加自己的文章。回到命令行
@@ -84,7 +94,7 @@ $ git push origin master
 ### 添加表情
 使用 [jemoji](https://github.com/jekyll/jemoji) 插件。在自己的 Gemfile 添加 `gem 'jemoji'`
 ```
-source 'https://rubygems.org
+source 'https://rubygems.org'
 gem 'github-pages', group: :jekyll_plugins
 gem 'jemoji'
 ```
