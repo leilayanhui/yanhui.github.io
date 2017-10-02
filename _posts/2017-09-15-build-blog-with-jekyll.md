@@ -1,5 +1,5 @@
-## 用 Git, Jekyll, Github Pages 搭建博客
-使用这三个搭建博客，既能专心写博客，又能达到高度自己定义，无广告，若你还会 css，JavaScript，还能自己设计博客式样。
+# 用 Git, Jekyll, Github Pages 搭建博客
+使用这三个工具搭建博客，既能专心写博客，又能达到高度自己定义，无广告，若你还会 css，JavaScript，还能自己设计博客式样。
 
 **Git**：用于管理版本，即使你不断修改、更新自己的博客，也能用 git 找回原来的内容。
 
@@ -11,7 +11,7 @@
 
 我的系统环境：windows 10 64bit, windows subsystem linux, ubuntu 16.04
 
-### 安装 Ruby
+## 安装 Ruby
 Jekyll 是基于 Ruby 开发的，所以要先安装 Ruby。Ruby 和 Python 一样有很多版本，所以最好先安装 Ruby 的版本管理软件，如 rvm，再通过 rvm 安装 ruby。
 ```
 # 先安装 GPG keys
@@ -28,7 +28,7 @@ ruby 2.4.1p111
 
 ubuntu 的安装过程中提示你 `Run command as login shell`，在 Bash 中使用 `bash -l` 登陆。
 
-### 安装 Jekyll
+## 安装 Jekyll
 ```
 $ gem install bundler
 $ cd ~
