@@ -56,12 +56,25 @@ $ cd myblog
 $ git init
 Initialized empty Git repository in /home/.../myblog/.git
 
+$ touch Gemfile
+$ vim Gemfile
+```
+输入以下内容
+```
+source 'https://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins
+```
+回到命令行
+```
+$ bundle install
 $ jekyll new .
 Running bundle install in /home/.../myblog/.git
 ....
 New jekyll site installed in /home/.../myblog/.git
 
 $ bundler exec jekyll serve
+# 或者使用
+$ jekyll serve --no-watch
 ```
 Jekyll 会生成一个内网地址，在浏览器中复制该地址，你就可以在本地预览自己的博客。只是此时的博客非常简陋，想要自己的博客美美的，需要使用主题模板。
 
@@ -86,16 +99,23 @@ $ git remote add origin https://github.com/......
 $ git fetch origin
 $ git merge origin/master
 ```
-打开编辑器，根据模板文档修改 `_config.yml`。查看自己的 Gemfile 文件，内容是否如下
+编辑器打开 Gemfile，查看文件内容是否如下
 ```
 source 'https://rubygems.org'
 gem 'github-pages', group: :jekyll_plugins
 ```
-发布的博文都放在 `_post` 文件夹，主题模板会自带一些测试页面，把它们删除，添加自己的文章。回到命令行
+回到命令行
 ```
-$ cd myblog
 $ git add .
 $ git commit -m "Init commit"
+$ bundler install  # 安装 jekyll
+```
+编辑器打开 `_config.yml`，根据模板文档修改配置。
+
+发布的博文都放在 `_post` 文件夹，主题模板会自带一些测试页面，把它们删除，添加自己的文章。回到命令行
+```
+$ git add .
+$ git commit -m "Add new blog article"
 $ git push origin master
 ```
 打开自己的博客仓库，点击 Setting，拉到 GitHub Pages，点自己的博客地址，博客搭建成功。
