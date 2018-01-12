@@ -74,7 +74,7 @@ New jekyll site installed in /home/.../myblog/.git
 
 $ bundler exec jekyll serve
 # 或者使用
-$ jekyll serve --no-watch
+$ jekyll serve
 ```
 Jekyll 会生成一个内网地址，在浏览器中复制该地址，你就可以在本地预览自己的博客。只是此时的博客非常简陋，想要自己的博客美美的，需要使用主题模板。
 
